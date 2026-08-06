@@ -71,17 +71,15 @@ docker logs -f flowise-workspace
 
 ---
 
-## 🔑 User Registration & Authentication Gateway
+## 🔑 Login Authentication & Credentials
 
-Flowise is configured with a dedicated **Authentication Proxy Gateway**:
+Flowise is pre-configured with user authentication enabled.
 
-- **Default URL**: [http://localhost:3000](http://localhost:3000)
-- **First Landing Page**: **Registration Page** (`http://localhost:3000/register`)
-- **Login Toggle**: A prominent "Login Here" button allows existing users to log in at `http://localhost:3000/login`.
-- **Registration Toggle**: The Login page features a "Register Here" button to easily switch back.
-- **Persistence**: User account data is securely stored in a persistent SQLite database (`gateway_data`).
-- **Session Management**: Authenticated users are automatically redirected to the interactive Flowise AI canvas.
+- **URL**: [http://localhost:3000](http://localhost:3000)
+- **Username**: `admin@flowise.local`
+- **Password**: `FlowiseAdmin123!`
 
+*To change credentials or encryption keys, edit the [`.env`](.env) file before starting.*
 
 ---
 

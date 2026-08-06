@@ -47,13 +47,14 @@ while ($retryCount -lt $maxRetries -and -not $isReady) {
 Write-Host ""
 
 if ($isReady) {
-    Write-Host "Flowise Workspace & Auth Gateway are UP and RUNNING!" -ForegroundColor Green
+    Write-Host "Flowise is UP and RUNNING!" -ForegroundColor Green
     Write-Host "Access URL: http://localhost:3000" -ForegroundColor Cyan
-    Write-Host "User Registration & Login Gateway is active." -ForegroundColor Yellow
-    Write-Host "Opening Registration Page in browser..." -ForegroundColor Green
+    Write-Host "Login Credentials:" -ForegroundColor Yellow
+    Write-Host "   Username: admin@flowise.local" -ForegroundColor White
+    Write-Host "   Password: FlowiseAdmin123!" -ForegroundColor White
+    Write-Host "Opening Flowise in browser..." -ForegroundColor Green
     Start-Process $url
 } else {
-    Write-Host "Flowise containers started, but endpoint check timed out." -ForegroundColor Red
+    Write-Host "Flowise container started, but endpoint check timed out." -ForegroundColor Red
     Write-Host "Check status with: docker compose logs -f" -ForegroundColor Yellow
 }
-
